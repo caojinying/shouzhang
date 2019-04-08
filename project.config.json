@@ -10,7 +10,7 @@
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wx17e90fed3e355d0b",
-	"projectname": "my-project",
+	"projectname": "timemanag",
 	"condition": {
 		"search": {
 			"current": -1,

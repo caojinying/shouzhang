@@ -1,35 +1,72 @@
 <template>
   <div @click="clickHandle">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
-
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" :value="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
-    <div class="all">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
-    </div>
+    <i-notice-bar icon="systemprompt" loop>
+    mt手帐上新啦！
+    </i-notice-bar>
+    <i-grid i-class="no-border">
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/grid/1.png" />
+        </i-grid-icon>
+        <i-grid-label>和纸胶带</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/grid/2.png" />
+        </i-grid-icon>
+        <i-grid-label>便签</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/grid/3.png" />
+        </i-grid-icon>
+        <i-grid-label>贴纸</i-grid-label>
+    </i-grid-item>
+</i-grid>
+    <i-grid i-class="no-border">
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/grid/4.png" />
+        </i-grid-icon>
+        <i-grid-label>印章</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/grid/5.png" />
+        </i-grid-icon>
+        <i-grid-label>书写工具</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/grid/6.png" />
+        </i-grid-icon>
+        <i-grid-label>册本</i-grid-label>
+    </i-grid-item>
+</i-grid>
+    <i-panel title="店铺推荐">
+      <view class="top-padding">
+      <i-card title="雅皮士与棕熊" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">复古素材</view>
+        <view slot="footer">店铺链接</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="靠近我温暖你" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">各种风格</view>
+        <view slot="footer">店铺链接</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="Cool Patch" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">布贴</view>
+        <view slot="footer">店铺链接</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="南风手帐" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">jpg</view>
+        <view slot="footer">店铺链接</view>
+      </i-card>
+      <view class="top-padding"></view>
+    </view>
+    </i-panel>
   </div>
 </template>
 
@@ -73,6 +110,12 @@ export default {
 </script>
 
 <style scoped>
+div >>> .no-border {
+  border-width: 0pt;
+}
+.top-padding {
+  padding-top: 50rpx;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
