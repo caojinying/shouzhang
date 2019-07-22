@@ -37,10 +37,10 @@ export default {
     return {
       title_name: "推荐",
       grids: [
-        {title:"胶带",image:"/static/images/1.png"},
-        {title:"便签",image:"/static/images/2.png"},
-        {title:"印章",image:"/static/images/3.png"},
-        {title:"素材",image:"/static/images/4.png"}
+        {title:"胶带",image:"/static/grid/1.png"},
+        {title:"便签",image:"/static/grid/2.png"},
+        {title:"印章",image:"/static/grid/4.png"},
+        {title:"素材",image:"/static/grid/6.png"}
       ],
       top: [
         {name:"雅皮士与棕熊",address:"地址1",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍1"},
