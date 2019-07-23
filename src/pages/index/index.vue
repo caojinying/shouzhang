@@ -5,6 +5,7 @@
       :autoplay="autoplay"
       :interval="interval"
       :duration="duration"
+      :circular="crircular"
     >
       <block v-for="img in imgUrls" :key="img">
         <swiper-item>
@@ -53,10 +54,11 @@ export default {
         'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
         'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
       ],
-      indicatorDots: false,
-      autoplay: false,
+      indicatorDots: ture,
+      autoplay: ture,
       interval: 5000,
-      duration: 1000
+      duration: 1000,
+      circular: ture
     }
   },
 
